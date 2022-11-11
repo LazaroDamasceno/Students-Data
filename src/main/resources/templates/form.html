@@ -5,6 +5,24 @@
     <title>Form</title>
 </head>
 <body>
-
+    <form method="post" th:action=@"{/submitData}" th:object="${data}">
+        <label>Name: </label>
+        <input type="text" th:field="*{name}" placeholder="Set the name" />
+        <br />
+        <br />
+        <label>Age: </label>
+        <input type="text" th:field="*{age}" placeholder="Set the age" />
+        <br />
+        <br />
+        <label>Sex: </label>
+        <input type="text" th:field="*{sex}" placeholder="Set the sex" />
+        <br />
+        <br />
+        <label>Grade: </label>
+        <input type="text" th:field="*{grade}" placeholder="Set the grade" />
+        <br />
+        <br />
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>

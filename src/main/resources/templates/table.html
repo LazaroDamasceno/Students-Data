@@ -5,6 +5,19 @@
     <title>Table</title>
 </head>
 <body>
-
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>Grade</th>
+        </tr>
+        <tr th:each="datum : ${data}">
+            <td th:text=$"{datum.name}"></td>
+            <td th:text=$"{datum.age}"></td>
+            <td th:text=$"{datum.sex}"></td>
+            <td th:text=$"{datum.grade}"></td>
+        </tr>
+    </table>
 </body>
 </html>
